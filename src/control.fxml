@@ -36,47 +36,47 @@
             <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Button fx:id="button1" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" prefHeight="50.0" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Button maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" prefHeight="50.0" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button2" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button3" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button4" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="4" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="4" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button5" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button6" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button7" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="7" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="7" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button8" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button9" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -86,7 +86,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button0" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -216,7 +216,7 @@
                               <Insets left="1.0" />
                            </padding>
                         </Label>
-                        <Label text="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                        <Label fx:id="player1Sets" text="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                            <padding>
                               <Insets left="1.0" />
                            </padding>
@@ -226,7 +226,7 @@
                               <Insets right="1.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label text="0" GridPane.columnIndex="3">
+                        <Label fx:id="player1Legs" text="0" GridPane.columnIndex="3">
                            <padding>
                               <Insets left="1.0" />
                            </padding>
@@ -249,7 +249,7 @@
                               <Insets left="1.0" />
                            </padding>
                         </Label>
-                        <Label text="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                        <Label fx:id="player2Sets" text="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                            <padding>
                               <Insets left="1.0" />
                            </padding>
@@ -259,7 +259,7 @@
                               <Insets right="1.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label text="0" GridPane.columnIndex="3">
+                        <Label fx:id="player2Legs" text="0" GridPane.columnIndex="3">
                            <padding>
                               <Insets left="1.0" />
                            </padding>

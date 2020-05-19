@@ -23,7 +23,7 @@ public class Player {
     }
 
     public void resetScore() {
-        score = new Score();
+        score.resetScore();
     }
 
     public Score getScoreObject() {

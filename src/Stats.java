@@ -5,21 +5,19 @@ public class Stats {
     private int ton;
     private int tonForty;
     private int tonEighty;
+    private int legsWon;
+    private int setsWon;
 
     public Stats() {
 
     }
 
-    public void tonScored() {
-        ton++;
+    public int getLegsWon() {
+        return legsWon;
     }
 
-    public void tonFortyScored() {
-        tonForty++;
-    }
-
-    public void tonEightyScored() {
-        tonEighty++;
+    public int getSetsWon() {
+        return setsWon;
     }
 
     public void addScore(int score) {
@@ -27,6 +25,23 @@ public class Stats {
         average += score;
         dartsThrown += 3;
         average = average / dartsThrown;
+        if (score == 180) {
+            tonEighty++;
+        }
+        else if (score >= 140) {
+            tonForty++;
+        }
+        else if (score >= 100) {
+            ton++;
+        }
+    }
+
+    public void legWon() {
+        legsWon++;
+    }
+
+    public void setWon() {
+        setsWon++;
     }
 
     public double getAverage() {

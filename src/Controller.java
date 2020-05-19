@@ -15,10 +15,13 @@ public class Controller {
     public Label secondaryScoreLabel;
     public Button cancelButton;
     public Button submitButton;
+    public Label player2Sets;
+    public Label player2Legs;
+    public Label player1Legs;
+    public Label player1Sets;
     private Match match;
     private Player player1;
     private Player player2;
-
 
     public void newGame() {
         if (player1NameField.getText().equals("") || player2NameField.getText().equals("") || setsChoice.getValue() == null || legsChoice.getValue() == null) {
@@ -29,6 +32,11 @@ public class Controller {
             alert.showAndWait();
             return;
         }
+        player1Sets.setText("0");
+        player2Sets.setText("0");
+        player1Legs.setText("0");
+        player2Legs.setText("0");
+        submitButton.setDisable(false);
         player1 = new Player(player1NameField.getText());
         player2 = new Player(player2NameField.getText());
         match = new Match((Integer) setsChoice.getValue(), (Integer) legsChoice.getValue(), player1, player2);
@@ -55,6 +63,10 @@ public class Controller {
             player1NameLabel.setStyle("-fx-text-fill: black;");
             player2NameLabel.setStyle("-fx-text-fill: green;");
         }
+        player1Legs.setText("" + player1.getScoreObject().getLegs());
+        player2Legs.setText("" + player2.getScoreObject().getLegs());
+        player1Sets.setText("" + player1.getScoreObject().getSets());
+        player2Sets.setText("" + player2.getScoreObject().getSets());
         player1ScoreLabel.setText("" + player1.getScoreInt());
         player2ScoreLabel.setText("" + player2.getScoreInt());
     }
@@ -67,10 +79,19 @@ public class Controller {
                 alert.setHeaderText(null);
                 alert.setContentText("Invalid score!");
                 alert.showAndWait();
+                secondaryScoreLabel.setText("");
                 return;
             }
-            refreshScore();
+            if (match.checkOut(player1)) {
+                match.nextLeg(player1);
+                player1.getStats().legWon();
+            }
+            else if (match.checkOut(player2)) {
+                match.nextLeg(player2);
+                player1.getStats().legWon();
+            }
             secondaryScoreLabel.setText("");
+            refreshScore();
         }
         else if (((Button) event.getSource()).equals(cancelButton)) {
             secondaryScoreLabel.setText(secondaryScoreLabel.getText().substring(0, secondaryScoreLabel.getText().length() - 1));

@@ -35,23 +35,34 @@ public class Match {
         return current;
     }
 
-    public void nextLeg() {
+    public void nextLeg(Player player) {
         player1.resetScore();
         player2.resetScore();
-        if (currentLeg + 1 == bestOfLegs) {
-            nextSet();
+        player.getScoreObject().legWon();
+        player.getStats().legWon();
+        if (player.getScoreObject().getLegs() == Math.round(bestOfLegs * 1.0 / 2)) {
+            player1.getScoreObject().resetLegs();
+            player2.getScoreObject().resetLegs();
+            nextSet(player);
         }
         else currentLeg++;
     }
 
-    public void nextSet() {
-        currentLeg = 1;
+    public void nextSet(Player player) {
         player1.resetScore();
         player2.resetScore();
+        player.getScoreObject().setWon();
+        player.getStats().setWon();
+        currentLeg = 1;
+        currentSet++;
+        if (player.getScoreObject().getSets() == Math.round(bestOfSets * 1.0 / 2)) {
+            // end match
+        }
     }
 
     public boolean score(int score) {
         if (current.getScoreObject().addScore(score)) {
+            current.getStats().addScore(score);
             nextPlayer();
             return true;
         }
