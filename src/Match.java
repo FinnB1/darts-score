@@ -6,6 +6,8 @@ public class Match {
 
     public Match(int firstTo) {
         this.firstTo = firstTo;
+        this.currentLeg = 1;
+        this.currentSet = 1;
     }
 
 
