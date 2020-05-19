@@ -27,7 +27,15 @@ public class Score {
         else if (this.score - scored == 1) {
             return false;
         }
+        else if (scored == 163 || scored == 166 || scored == 169 || scored == 172 || scored == 173 || scored == 175 ||
+        scored == 176 || scored == 178 || scored == 179) {
+            return false;
+        }
         // add checks for impossible scores
         else return true;
+    }
+
+    public boolean checkOut() {
+        return score == 0;
     }
 }
