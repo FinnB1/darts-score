@@ -24,7 +24,15 @@ public class Match {
     }
 
     public boolean checkOut(Player player) {
-        return player.getScore().checkOut();
+        return player.getScoreObject().checkOut();
+    }
+
+    public boolean checkWin() {
+        return false;
+    }
+
+    public Player getCurrentPlayer() {
+        return current;
     }
 
     public void nextLeg() {
@@ -43,9 +51,17 @@ public class Match {
     }
 
     public boolean score(int score) {
-        return current.getScore().addScore(score);
+        if (current.getScoreObject().addScore(score)) {
+            nextPlayer();
+            return true;
+        }
+        else return false;
     }
 
-
+    private void nextPlayer() {
+        if (current.equals(player1))
+            current = player2;
+        else current = player1;
+    }
 
 }

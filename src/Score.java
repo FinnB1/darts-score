@@ -35,6 +35,10 @@ public class Score {
         else return true;
     }
 
+    public int getScore() {
+        return this.score;
+    }
+
     public boolean checkOut() {
         return score == 0;
     }

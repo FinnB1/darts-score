@@ -26,7 +26,11 @@ public class Player {
         score = new Score();
     }
 
-    public Score getScore() {
+    public Score getScoreObject() {
         return score;
+    }
+
+    public int getScoreInt() {
+        return score.getScore();
     }
 }
