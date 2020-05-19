@@ -7,6 +7,9 @@ public class Match {
     private Player player1;
     private Player player2;
     private Player current;
+    private boolean won;
+    private Player winner;
+    private Player loser;
 
     public Match(int bestOfSets, int bestOfLegs, Player one, Player two) {
         this.bestOfSets = bestOfSets;
@@ -27,12 +30,44 @@ public class Match {
         return player.getScoreObject().checkOut();
     }
 
-    public boolean checkWin() {
-        return false;
+    public int getBestOfSets() {
+        return bestOfSets;
+    }
+
+    public int getBestOfLegs() {
+        return bestOfLegs;
+    }
+
+    public int getCurrentLeg() {
+        return currentLeg;
+    }
+
+    public int getCurrentSet() {
+        return currentSet;
     }
 
     public Player getCurrentPlayer() {
         return current;
+    }
+
+    private void winMatch(Player player) {
+        won = true;
+        winner = player;
+        if (winner.equals(player1))
+            loser = player2;
+        else loser = player1;
+    }
+
+    public boolean isWon() {
+        return won;
+    }
+
+    public Player getWinner() {
+        return winner;
+    }
+
+    public Player getLoser() {
+        return loser;
     }
 
     public void nextLeg(Player player) {
@@ -56,7 +91,7 @@ public class Match {
         currentLeg = 1;
         currentSet++;
         if (player.getScoreObject().getSets() == Math.round(bestOfSets * 1.0 / 2)) {
-            // end match
+            winMatch(player);
         }
     }
 

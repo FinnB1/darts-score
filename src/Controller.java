@@ -19,6 +19,8 @@ public class Controller {
     public Label player2Legs;
     public Label player1Legs;
     public Label player1Sets;
+    public Label currentSetLabel;
+    public Label currentLegLabel;
     private Match match;
     private Player player1;
     private Player player2;
@@ -40,16 +42,18 @@ public class Controller {
         player1 = new Player(player1NameField.getText());
         player2 = new Player(player2NameField.getText());
         match = new Match((Integer) setsChoice.getValue(), (Integer) legsChoice.getValue(), player1, player2);
+        currentSetLabel.setText("Set 1 of "+match.getBestOfSets());
+        currentLegLabel.setText("Leg 1 of "+match.getBestOfLegs());
         player1NameLabel.setText(player1.getName());
         player1NameLabel.setStyle("-fx-text-fill: green;");
         player2NameLabel.setText(player2.getName());
         match.startMatch();
+        refreshScore();
     }
 
     public void numberButtonPress(Event event) {
         if (secondaryScoreLabel.getText().length() != 3) {
             String number = ((Button) event.getSource()).getText();
-            System.out.println(number);
             secondaryScoreLabel.setText(secondaryScoreLabel.getText() + number);
         }
     }
@@ -69,11 +73,13 @@ public class Controller {
         player2Sets.setText("" + player2.getScoreObject().getSets());
         player1ScoreLabel.setText("" + player1.getScoreInt());
         player2ScoreLabel.setText("" + player2.getScoreInt());
+        currentSetLabel.setText("Set "+ match.getCurrentSet()+" of "+match.getBestOfSets());
+        currentLegLabel.setText("Leg "+ match.getCurrentLeg()+" of "+match.getBestOfLegs());
     }
 
     public void otherButtonPress(Event event) {
         if (((Button) event.getSource()).equals(submitButton)) {
-            if (!match.score(Integer.parseInt(secondaryScoreLabel.getText()))) {
+            if (!match.score(Integer.parseInt(secondaryScoreLabel.getText())) || secondaryScoreLabel.getText().length() == 0) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Alert");
                 alert.setHeaderText(null);
@@ -89,6 +95,16 @@ public class Controller {
             else if (match.checkOut(player2)) {
                 match.nextLeg(player2);
                 player1.getStats().legWon();
+            }
+            if (match.isWon()) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Congratulations");
+                alert.setHeaderText(null);
+                alert.setContentText(match.getWinner().getName() + " won the match "+ match.getWinner().getScoreObject().getSets()+ "-" + match.getLoser().getScoreObject().getSets());
+                alert.showAndWait();
+                newGame();
+                refreshScore();
+                return;
             }
             secondaryScoreLabel.setText("");
             refreshScore();
