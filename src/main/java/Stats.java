@@ -1,7 +1,7 @@
 public class Stats {
 
     private double average;
-    private int dartsThrown;
+    private double dartsThrown;
     private int ton;
     private int tonForty;
     private int tonEighty;
@@ -21,10 +21,10 @@ public class Stats {
     }
 
     public void addScore(int score) {
-        average = average * dartsThrown;
+        average = average * (dartsThrown / 3);
         average += score;
         dartsThrown += 3;
-        average = average / dartsThrown;
+        average = average / (dartsThrown / 3);
         if (score == 180) {
             tonEighty++;
         }
@@ -48,7 +48,7 @@ public class Stats {
         return average;
     }
 
-    public int getDartsThrown() {
+    public double getDartsThrown() {
         return dartsThrown;
     }
 

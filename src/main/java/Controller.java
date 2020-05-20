@@ -2,6 +2,8 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.control.*;
 
+import java.text.DecimalFormat;
+
 public class Controller {
     public Button newGameButton;
     public Label player1ScoreLabel;
@@ -21,6 +23,16 @@ public class Controller {
     public Label player1Sets;
     public Label currentSetLabel;
     public Label currentLegLabel;
+    public Label player1StatsNameLabel;
+    public Label player2StatsNameLabel;
+    public Label player13DA;
+    public Label player23DA;
+    public Label player1ton;
+    public Label player2ton;
+    public Label player1ton40;
+    public Label player2ton40;
+    public Label player1ton80;
+    public Label player2ton80;
     private Match match;
     private Player player1;
     private Player player2;
@@ -47,8 +59,11 @@ public class Controller {
         player1NameLabel.setText(player1.getName());
         player1NameLabel.setStyle("-fx-text-fill: green;");
         player2NameLabel.setText(player2.getName());
+        player1StatsNameLabel.setText(player1.getName());
+        player2StatsNameLabel.setText(player2.getName());
         match.startMatch();
         refreshScore();
+        refreshStats();
     }
 
     public void numberButtonPress(Event event) {
@@ -77,6 +92,20 @@ public class Controller {
         currentLegLabel.setText("Leg "+ match.getCurrentLeg()+" of "+match.getBestOfLegs());
     }
 
+    private void refreshStats() {
+        DecimalFormat df = new DecimalFormat("#.00");
+        Stats p1Stats = player1.getStats();
+        Stats p2Stats = player2.getStats();
+        player13DA.setText(df.format(p1Stats.getAverage()));
+        player23DA.setText(df.format(p2Stats.getAverage()));
+        player1ton.setText(""+p1Stats.getTon());
+        player2ton.setText(""+p2Stats.getTon());
+        player1ton40.setText(""+p1Stats.getTonForty());
+        player2ton40.setText(""+p2Stats.getTonForty());
+        player1ton80.setText(""+p1Stats.getTonEighty());
+        player2ton80.setText(""+p2Stats.getTonEighty());
+    }
+
     public void otherButtonPress(Event event) {
         if (((Button) event.getSource()).equals(submitButton)) {
             if (!match.score(Integer.parseInt(secondaryScoreLabel.getText())) || secondaryScoreLabel.getText().length() == 0) {
@@ -102,12 +131,12 @@ public class Controller {
                 alert.setHeaderText(null);
                 alert.setContentText(match.getWinner().getName() + " won the match "+ match.getWinner().getScoreObject().getSets()+ "-" + match.getLoser().getScoreObject().getSets());
                 alert.showAndWait();
-                newGame();
                 refreshScore();
                 return;
             }
             secondaryScoreLabel.setText("");
             refreshScore();
+            refreshStats();
         }
         else if (((Button) event.getSource()).equals(cancelButton)) {
             secondaryScoreLabel.setText(secondaryScoreLabel.getText().substring(0, secondaryScoreLabel.getText().length() - 1));
