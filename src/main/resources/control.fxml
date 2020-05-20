@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Integer?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="288.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="436.0" minWidth="10.0" prefWidth="312.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="296.0" minHeight="10.0" prefHeight="172.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="240.0" minHeight="0.0" prefHeight="228.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="104.0" prefWidth="112.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="104.0" prefWidth="128.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="104.0" prefWidth="122.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="55.0" minHeight="56.0" prefHeight="56.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="53.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.0" minHeight="56.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="75.0" minHeight="56.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" prefHeight="50.0" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="4" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="7" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#otherButtonPress" text="❌" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#numberButtonPress" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="submitButton" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onMouseClicked="#otherButtonPress" text="✔" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="125.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="37.0" minHeight="21.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="65.0" minHeight="30.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="63.0" minHeight="22.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="63.0" minHeight="30.0" prefHeight="42.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Player 1 Name:" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets top="5.0" />
+                     </GridPane.margin></Label>
+                  <TextField fx:id="player1NameField" maxWidth="100.0" prefWidth="100.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label text="Player 2 Name:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets top="5.0" />
+                     </GridPane.margin></Label>
+                  <TextField fx:id="player2NameField" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label text="Best of Sets" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding></Label>
+                  <Label text="Best of Legs" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding></Label>
+                  <ChoiceBox fx:id="setsChoice" maxWidth="100.0" prefWidth="100.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <Integer fx:value="3" />
+                           <Integer fx:value="5" />
+                           <Integer fx:value="7" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="legsChoice" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList">
+                              <Integer fx:value="3" />
+                              <Integer fx:value="5" />
+                              <Integer fx:value="7" />
+                          </FXCollections>
+                      </items>
+                  </ChoiceBox>
+               </children>
+            </GridPane>
+            <Button fx:id="newGameButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#newGame" text="New Game" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="134.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="player1NameLabel" text="Player 1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="player2NameLabel" text="Player 2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="player2ScoreLabel" text="501" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="54.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="player1ScoreLabel" text="501" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="54.0" />
+                     </font>
+                  </Label>
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="60.333343505859375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.666656494140625" minWidth="0.0" prefWidth="19.666656494140625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.33331298828125" minWidth="10.0" prefWidth="19.333343505859375" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="62.333343505859375" minWidth="10.0" prefWidth="62.333343505859375" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="S:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="player1Sets" text="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                        </Label>
+                        <Label text="L:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets right="1.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="player1Legs" text="0" GridPane.columnIndex="3">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="60.333343505859375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.666656494140625" minWidth="0.0" prefWidth="19.666656494140625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.33331298828125" minWidth="10.0" prefWidth="19.333343505859375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="62.333343505859375" minWidth="10.0" prefWidth="62.333343505859375" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="S:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="player2Sets" text="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                        </Label>
+                        <Label text="L:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets right="1.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="player2Legs" text="0" GridPane.columnIndex="3">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <Label fx:id="secondaryScoreLabel" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="currentSetLabel" text="Set" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="currentLegLabel" text="Leg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

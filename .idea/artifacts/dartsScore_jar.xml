@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="dartsScore:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/dartsScore_jar</output-path>
+    <root id="archive" name="dartsScore.jar">
+      <element id="module-output" name="dartsScore" />
+    </root>
+  </artifact>
+</component>
