@@ -5,6 +5,7 @@ import javafx.scene.control.*;
 import java.text.DecimalFormat;
 
 public class Controller {
+
     public Button newGameButton;
     public Label player1ScoreLabel;
     public Label player2ScoreLabel;
