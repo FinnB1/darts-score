@@ -38,6 +38,9 @@ public class Controller {
     private Player player1;
     private Player player2;
 
+    /**
+     * Setup a new game using user-input from fields
+     */
     public void newGame() {
         if (player1NameField.getText().equals("") || player2NameField.getText().equals("") || setsChoice.getValue() == null || legsChoice.getValue() == null) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -67,6 +70,10 @@ public class Controller {
         refreshStats();
     }
 
+    /**
+     * Handles score number button presses
+     * @param event button press
+     */
     public void numberButtonPress(Event event) {
         if (secondaryScoreLabel.getText().length() != 3) {
             String number = ((Button) event.getSource()).getText();
@@ -74,6 +81,9 @@ public class Controller {
         }
     }
 
+    /**
+     * Switches font colours to determine current player and updates current leg/set scores
+     */
     private void refreshScore() {
         if (match.getCurrentPlayer().equals(player1)) {
             player1NameLabel.setStyle("-fx-text-fill: green;");
@@ -93,6 +103,9 @@ public class Controller {
         currentLegLabel.setText("Leg "+ match.getCurrentLeg()+" of "+match.getBestOfLegs());
     }
 
+    /**
+     * Recalculate stats after a throw
+     */
     private void refreshStats() {
         DecimalFormat df = new DecimalFormat("#.00");
         Stats p1Stats = player1.getStats();
@@ -107,6 +120,12 @@ public class Controller {
         player2ton80.setText(""+p2Stats.getTonEighty());
     }
 
+    /**
+     * Handles button presses other than score numbers
+     * Detects and handles end of leg/end of set and updates accordingly
+     * Checks for match win
+     * @param event button press
+     */
     public void otherButtonPress(Event event) {
         if (((Button) event.getSource()).equals(submitButton)) {
             if (!match.score(Integer.parseInt(secondaryScoreLabel.getText())) || secondaryScoreLabel.getText().length() == 0) {

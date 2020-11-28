@@ -7,6 +7,9 @@ import javafx.stage.Stage;
 
 public class DartsScore extends Application {
 
+    /**
+     *  Set up window
+     */
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("control.fxml"));

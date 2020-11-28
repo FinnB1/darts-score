@@ -20,6 +20,11 @@ public class Stats {
         return setsWon;
     }
 
+    /**
+     * Update statistics to account for new score added
+     * Including updating average and high scores if achieved
+     * @param score to add
+     */
     public void addScore(int score) {
         average = average * (dartsThrown / 3);
         average += score;

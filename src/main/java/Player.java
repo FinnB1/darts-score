@@ -10,6 +10,8 @@ public class Player {
         this.name = name;
     }
 
+    // Gets
+
     public Stats getStats() {
         return stats;
     }

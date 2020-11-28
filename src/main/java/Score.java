@@ -11,6 +11,11 @@ public class Score {
         sets = 0;
     }
 
+    /**
+     * Add score if valid
+     * @param scored number scored
+     * @return t/f
+     */
     public boolean addScore(int scored) {
         if (checkScore(scored)) {
             this.score -= scored;
@@ -45,6 +50,13 @@ public class Score {
         this.score = start;
     }
 
+    /**
+     * Check if score is a valid darts score e.g. Cannot be greater than 180, cannot be greater than remaining score or leave 1 to end
+     * Also accounts for impossible scores such as 163,166,169 etc.
+     * Checks that checkout is valid/has hit a double
+     * @param scored
+     * @return
+     */
     private boolean checkScore(int scored) {
         if (scored > 180) {
             return false;
